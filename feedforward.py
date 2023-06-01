@@ -22,8 +22,8 @@ class PencilBeamModel(nn.Module):
 
 # path to training data
 dpath = r'/home/luke/Scripts/Logfile_Prediction/datasets'
-record = pd.read_csv(os.path.join(dpath, 'patient_1663630_records_data.csv')) 
-delta = pd.read_csv(os.path.join(dpath, 'patient_1663630_log-plan_delta.csv'))  # should be same shape
+record = pd.read_csv(os.path.join(dpath, 'patient_1676348_records_data.csv')) 
+delta = pd.read_csv(os.path.join(dpath, 'patient_1676348_log-plan_delta.csv'))  # should be same shape
 delta.drop(columns=['GANTRY_ANGLE'], inplace=True) 
 if len(record) == len(delta):
     data = pd.concat([record, delta], axis=1)
